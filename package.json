@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "React Node JS fullstack app",
+  "main": "server/app.js",
+  "scripts": {
+    "client-install": "npm --prefix client install",
+    "server-install": "npm --prefix server install",
+    "dev": "concurrently \"npm run serve --prefix server\" \"npm run start --prefix client\"",
+    "start": "npm run client-install && npm run server-install && npm run dev"
+  },
+  "keywords": [
+    "NodeJS",
+    "Express",
+    "React"
+  ],
+  "author": "Alex Pushkin <apushkaa@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

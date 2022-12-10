@@ -1,0 +1,177 @@
+[
+  {
+    "name": "макияж",
+    "tree": "makeup",
+    "level": 0
+  },
+  {
+    "name": "лицо",
+    "tree": "makeup/face",
+    "level": 1
+  },
+  {
+    "name": "брови",
+    "tree": "makeup/brows",
+    "level": 1
+  },
+  {
+    "name": "ногти",
+    "tree": "makeup/nails",
+    "level": 1
+  },
+  {
+    "name": "глаза",
+    "tree": "makeup/eyes",
+    "level": 1
+  },
+  {
+    "name": "губы",
+    "tree": "makeup/lips",
+    "level": 1
+  },
+  {
+    "name": "аксессуары",
+    "tree": "makeup/accessories",
+    "level": 1
+  },
+  {
+    "name": "праймеры",
+    "tree": "makeup/face/face_primers",
+    "level": 3
+  },
+  {
+    "name": "тональные средства",
+    "tree": "makeup/face/face_tones",
+    "level": 3
+  },
+  {
+    "name": "корректоры/консилеры",
+    "tree": "makeup/face/face_concealers",
+    "level": 3
+  },
+  {
+    "name": "пудра",
+    "tree": "makeup/face/face_powders",
+    "level": 3
+  },
+  {
+    "name": "румяна",
+    "tree": "makeup/face/face_blushers",
+    "level": 3
+  },
+  {
+    "name": "скульптор/хайлайтер",
+    "tree": "makeup/face/face_highlighters",
+    "level": 3
+  },
+  {
+    "name": "фиксаторы (для макияжа)",
+    "tree": "makeup/face/face_fixators",
+    "level": 3
+  },
+  {
+    "name": "Кисти для лица/спонжи",
+    "tree": "makeup/face/face_brushes",
+    "level": 3
+  },
+  {
+    "name": "гели для бровей",
+    "tree": "makeup/brows/brows_gels",
+    "level": 3
+  },
+  {
+    "name": "тени для бровей",
+    "tree": "makeup/brows/brows_shadows",
+    "level": 3
+  },
+  {
+    "name": "карандаши  и маркеры",
+    "tree": "makeup/brows/brows_pencils",
+    "level": 3
+  },
+  {
+    "name": "кисти для бровей",
+    "tree": "makeup/brows/brows_brushes",
+    "level": 3
+  },
+  {
+    "name": "лаки для ногтей",
+    "tree": "makeup/nails/nails_polish",
+    "level": 3
+  },
+  {
+    "name": "Базы и покрытия для ногтей",
+    "tree": "makeup/nails/nails_bases",
+    "level": 3
+  },
+  {
+    "name": "Уход за ногтями",
+    "tree": "makeup/nails/nails_care",
+    "level": 3
+  },
+  {
+    "name": "Аксессуары для маникюра",
+    "tree": "makeup/nails/nails_accessories",
+    "level": 3
+  },
+  {
+    "name": "тушь для ресниц",
+    "tree": "makeup/eyes/eyes_mascara",
+    "level": 3
+  },
+  {
+    "name": "основа под тени",
+    "tree": "makeup/eyes/eyes_bases",
+    "level": 3
+  },
+  {
+    "name": "тени для век",
+    "tree": "makeup/eyes/eyes_shadows",
+    "level": 3
+  },
+  {
+    "name": "карандаши  и подводки",
+    "tree": "makeup/eyes/eyes_pencils",
+    "level": 3
+  },
+  {
+    "name": "кисти для глаз",
+    "tree": "makeup/eyes/eyes_brushes",
+    "level": 3
+  },
+  {
+    "name": "помады",
+    "tree": "makeup/lips/lips_lipsticks",
+    "level": 3
+  },
+  {
+    "name": "блески и тинты",
+    "tree": "makeup/lips/lips_tints",
+    "level": 3
+  },
+  {
+    "name": "карандаши для губ",
+    "tree": "makeup/lips/lips_pencils",
+    "level": 3
+  },
+  {
+    "name": "бальзамы для губ",
+    "tree": "makeup/lips/lips_balms",
+    "level": 3
+  },
+  {
+    "name": "кисти для губ",
+    "tree": "makeup/lips/lips_brushes",
+    "level": 3
+  },
+  {
+    "name": "кисти/спонжи",
+    "tree": "makeup/accessories/accessories_brushes",
+    "level": 3
+  },
+  {
+    "name": "другое",
+    "tree": "makeup/accessories/accessories_other",
+    "level": 3
+  }
+]

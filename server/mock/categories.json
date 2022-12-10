@@ -1,0 +1,110 @@
+[
+  {
+    "name": "makeup"
+  },
+  {
+    "name": "skincare"
+  },
+  {
+    "name": "face"
+  },
+  {
+    "name": "brows"
+  },
+  {
+    "name": "nails"
+  },
+  {
+    "name": "eyes"
+  },
+  {
+    "name": "lips"
+  },
+  {
+    "name": "accessories"
+  },
+  {
+    "name": "face_primers"
+  },
+  {
+    "name": "face_tones"
+  },
+  {
+    "name": "face_concealers"
+  },
+  {
+    "name": "face_powder"
+  },
+  {
+    "name": "face_blushers"
+  },
+  {
+    "name": "face_highlighters"
+  },
+  {
+    "name": "face_fixators"
+  },
+  {
+    "name": "face_brushes"
+  },
+  {
+    "name": "brows_gels"
+  },
+  {
+    "name": "brows_shadows"
+  },
+  {
+    "name": "brows_pencils"
+  },
+  {
+    "name": "brows_brushes"
+  },
+  {
+    "name": "nails_polish"
+  },
+  {
+    "name": "nails_bases"
+  },
+  {
+    "name": "nails_care"
+  },
+  {
+    "name": "nails_accessories"
+  },
+  {
+    "name": "eyes_mascara"
+  },
+  {
+    "name": "eyes_bases"
+  },
+  {
+    "name": "eyes_shadows"
+  },
+  {
+    "name": "eyes_pencils"
+  },
+  {
+    "name": "eyes_brushes"
+  },
+  {
+    "name": "lips_lipsticks"
+  },
+  {
+    "name": "lips_tints"
+  },
+  {
+    "name": "lips_pencils"
+  },
+  {
+    "name": "lips_balms"
+  },
+  {
+    "name": "lips_brushes"
+  },
+  {
+    "name": "accessories_brushes"
+  },
+  {
+    "name": "accessories_other"
+  }
+]

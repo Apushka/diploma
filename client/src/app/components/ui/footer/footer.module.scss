@@ -1,0 +1,23 @@
+.container {
+    @apply columns-3 gap-8 bg-black text-white p-12;
+
+    .section {
+        @apply break-inside-avoid-column text-start;
+        .title {
+            @apply font-light text-base mb-4;
+        }
+        li,
+        a {
+            @apply text-sm font-light mb-3 hover:text-white;
+        }
+    }
+    .section:nth-child(even) {
+        @apply mb-14;
+    }
+    .section:nth-child(3),
+    .section:nth-child(5) {
+        .title {
+            @apply mb-1;
+        }
+    }
+}
