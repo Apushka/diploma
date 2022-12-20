@@ -22,8 +22,12 @@ const ProductPage = () => {
         restoreScroll();
     }, []);
 
-    if (isProductLoading) return <Loader />;
-    if (!product && !isProductLoading) return <div>Ничего не найдено...</div>;
+    if (isProductLoading) return <Loader full />;
+    if (!product && !isProductLoading) {
+        return <div className="flex items-center justify-center h-screen">
+            Ничего не найдено...
+        </div>;
+    }
 
     return <div>
         <PageHeader title={product.title} />

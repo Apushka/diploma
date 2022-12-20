@@ -19,26 +19,31 @@ function App() {
     return (
         <div className="text-sm">
             <Header />
-            <AppLoader>
-                <Switch>
-                    <Route exact path="/" component={Main} />
-                    <ProtectedRoute path="/order/:orderId?" component={Order} />
-                    <Route path="/login" component={Login} />
-                    <ProtectedRoute
-                        path="/profile/:remove?/:success?"
-                        component={Profile}
-                    />
-                    <Route path="/logout" component={Logout} />
-                    <Route path="/shops" component={Shops} />
-                    <Route path="/search" component={Search} />
-                    <Route
-                        path="/catalog/:category?/:productId?"
-                        component={Products}
-                    />
-                    <Redirect to="/" />
-                </Switch>
-                <ToastContainer />
-            </AppLoader>
+            <div className="mt-6">
+                <AppLoader>
+                    <Switch>
+                        <Route exact path="/" component={Main} />
+                        <ProtectedRoute
+                            path="/order/:orderId?"
+                            component={Order}
+                        />
+                        <Route path="/login" component={Login} />
+                        <ProtectedRoute
+                            path="/profile/:remove?/:success?"
+                            component={Profile}
+                        />
+                        <Route path="/logout" component={Logout} />
+                        <Route path="/shops" component={Shops} />
+                        <Route path="/search" component={Search} />
+                        <Route
+                            path="/catalog/:category?/:productId?"
+                            component={Products}
+                        />
+                        <Redirect to="/" />
+                    </Switch>
+                    <ToastContainer />
+                </AppLoader>
+            </div>
             <Footer />
         </div>
     );

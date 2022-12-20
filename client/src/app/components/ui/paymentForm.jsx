@@ -9,10 +9,10 @@ import TextField from "../common/form/textField";
 const PaymentForm = () => {
     const [isTrySubmit, setIsTrySubmit] = useState(false);
     const [data, setData] = useState({
-        cardNumber: "1234123412341234",
-        expiryDate: "12/30",
-        code: "234",
-        cardholderName: "sdf sdgf"
+        cardNumber: "",
+        expiryDate: "",
+        code: "",
+        cardholderName: ""
     });
     const [errors, setErrors] = useState({});
     const isValid = Object.keys(errors).length === 0;

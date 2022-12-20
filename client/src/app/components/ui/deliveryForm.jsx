@@ -21,13 +21,13 @@ const DeliveryForm = ({ onProceed }) => {
 
     const [isTrySubmit, setIsTrySubmit] = useState(false);
     const [data, setData] = useState({
-        country: "6392fc9087bc8a3dade1c1b3",
-        city: "6392fe741a7c1c881fc77c3b",
-        street: "sdf",
-        address: "24",
-        building: "234",
-        apartment: "234",
-        index: "234"
+        country: "",
+        city: "",
+        street: "",
+        address: "",
+        building: "",
+        apartment: "",
+        index: ""
     });
     const [errors, setErrors] = useState({});
     const isValid = Object.keys(errors).length === 0;

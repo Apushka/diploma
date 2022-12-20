@@ -12,13 +12,13 @@ const AccordionItem = ({ title, onToggle, isActive, isAvailable, component }) =>
         setTimeout(() => {
             setStyle(isActive
                 ? {
-                    height: ref.current.scrollHeight + "px"
+                    minHeight: ref.current.scrollHeight + "px"
                 }
                 : {
                     height: "0px"
                 });
         }, 100);
-    }, [isActive]);
+    }, [isActive, ref.current?.scrollHeight]);
 
     return <div className={"mb-6 border-b-2 border-black " + (!isAvailable ? "opacity-30" : "")}>
         <button

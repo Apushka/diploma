@@ -30,9 +30,10 @@ const Login = () => {
                 : <>
                     <h3 className="uppercase text-lg text-center mb-3">Войти</h3>
                     <LoginForm />
-                    <p className="m-2">Ещё нет аккаунта?
+                    <p className="flex flex-col m-2 md:flex-row">
+                        <p className="mr-1">Ещё нет аккаунта?</p>
                         <a
-                            className="mx-2 uppercase"
+                            className="uppercase hover:underline"
                             role="button"
                             onClick={toggleFormType}>
                             Зарегистрироваться

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const PageContent = ({ children }) => {
-    return <div className="p-6 mb-6 min-h-[70vh]">
+    return <div className="p-6 mb-6 min-h-[100vh]">
         {children}
     </div>;
 };

@@ -8,7 +8,7 @@ import HeaderNavIcon from "./headerNavIcon";
 
 const Header = () => {
     return (
-        <header className="bg-black flex relative justify-between items-center text-white px-3 py-2">
+        <header className="fixed top-0 w-full bg-black flex justify-between items-center text-white px-3 py-2 z-20">
             <HeaderNavIcon iconUrl={logoIcon} to="/" />
             <NavBar />
             <div className="flex gap-5">

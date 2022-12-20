@@ -46,7 +46,7 @@ const NavCart = () => {
             onClick={isProducts ? handleGoToCart : () => { }}
             pointer={isProducts} />
         {isProducts && open && <div
-            className={`absolute top-8 p-6 ${open ? "right-0" : "-right-[100%]"} border border-solid border-black bg-white text-black z-10 max-h-[70vh] overflow-scroll`}>
+            className={`hidden md:block absolute top-8 p-6 ${open ? "right-0" : "-right-[100%]"} border border-solid border-black bg-white text-black z-10 max-h-[70vh] overflow-scroll`}>
             <Cart onOrder={handleGoToCart} />
         </div>}
     </span>;
