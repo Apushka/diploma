@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import searchIcon from "../../../assets/search.png";
-import HeaderNavIcon from "../header/headerNavIcon";
 import SearchForm from "./searchForm";
+import HeaderNavIcon from "../header/headerNavIcon";
 
 const NavSearch = () => {
     const [isOpen, setIsOpen] = useState(false);
