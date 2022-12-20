@@ -1,14 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import accountIcon from "../../../assets/account.png";
 import { getUserData } from "../../../store/user";
+import HeaderNavIcon from "./headerNavIcon";
 import NavProfile from "./navProfile";
 
 const NavAccount = () => {
     const userData = useSelector(getUserData);
 
     return !userData
-        ? <NavLink to="/login">login</NavLink>
+        ? <HeaderNavIcon
+            iconUrl={accountIcon}
+            to="/login"
+        />
         : <NavProfile />;
 };
 

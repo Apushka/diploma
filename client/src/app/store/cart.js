@@ -44,6 +44,23 @@ const {
 export const getCartProductQuantity = (productId) => (state) =>
     state.cart.entities[productId];
 export const getCart = () => (state) => state.cart.entities;
+export const getCartProductsAmount = (state) =>
+    Object.values(state.cart.entities).reduce(
+        (prev, current) => prev + current,
+        0
+    );
+
+export const getCartTotalSum = (state) => {
+    if (Object.keys(state.products.entities).length > 0) {
+        return Object.entries(state.cart.entities).reduce((acc, current) => {
+            const [productId, amount] = current;
+            const price =
+                Number(state.products.entities[productId].price) * amount;
+            return acc + price;
+        }, 0);
+    }
+    return 0;
+};
 
 export const increaseCartProductQuantity =
     (productId) => (dispatch, getState) => {

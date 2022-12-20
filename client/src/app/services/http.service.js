@@ -48,7 +48,8 @@ http.interceptors.response.use(
 const httpService = {
     get: http.get,
     patch: http.patch,
-    post: http.post
+    post: http.post,
+    delete: http.delete
 };
 
 export default httpService;

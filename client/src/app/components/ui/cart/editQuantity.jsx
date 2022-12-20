@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
-import { decreaseCartProductQuantity, getCartProductQuantity, increaseCartProductQuantity } from "../../store/cart";
+import { decreaseCartProductQuantity, getCartProductQuantity, increaseCartProductQuantity } from "../../../store/cart";
 
 const EditQuantity = ({ productId }) => {
     const dispatch = useDispatch();
@@ -15,9 +15,9 @@ const EditQuantity = ({ productId }) => {
         dispatch(decreaseCartProductQuantity(productId));
     };
 
-    return <div className="w-[25%] py-5">
+    return <div className="w-[25%] py-5 text-center">
         <button onClick={handleRemoveFromCart}>-</button>
-        <span className="inline-block w-10">{productQuantity}</span>
+        <span className="inline-block w-5">{productQuantity}</span>
         <button onClick={handleAddToCart}>+</button>
     </div>;
 };

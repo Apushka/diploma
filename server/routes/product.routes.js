@@ -9,9 +9,9 @@ router.get("/", async (req, res) => {
     if (field === "title") {
       list = await Product.find({
         title: { $regex: value, $options: "i" },
-      }).populate("tags");
+      });
     } else {
-      list = await Product.find({ [field]: value }).populate("tags");
+      list = await Product.find({ [field]: value });
     }
     res.status(200).send(list);
   } catch (e) {

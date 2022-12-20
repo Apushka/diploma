@@ -55,7 +55,13 @@ const {
 } = actions;
 
 export const getOrdersLoadingStatus = (state) => state.orders.isLoading;
-export const getOrdersList = (state) => state.orders.orders;
+export const getOrdersList = (state) => {
+    if (state.orders.orders) {
+        return [...state.orders.orders].sort(
+            (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        );
+    } else return null;
+};
 export const getOrderById = (orderId) => (state) =>
     state.orders.orders?.find((o) => o._id === orderId);
 
@@ -72,7 +78,6 @@ export const createOrder = () => async (dispatch, getState) => {
         dispatch(emptyCart());
         history.push("/order/success");
     } catch (e) {
-        console.log(e);
         dispatch(orderCreateFailed(e.message));
     }
 };

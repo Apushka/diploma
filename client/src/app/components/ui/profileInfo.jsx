@@ -1,29 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
+import settingsIcon from "../../assets/settings.png";
 import { useSelector } from "react-redux";
 import { getUserData } from "../../store/user";
-import AppButton from "../common/buttonBlack";
-import { Link } from "react-router-dom";
-import { getOrdersList, getOrdersLoadingStatus } from "../../store/orders";
 
 const ProfileInfo = ({ onEdit }) => {
-    const { name, surname, email } = useSelector(getUserData);
-    const orders = useSelector(getOrdersList);
-    const isOrdersLoading = useSelector(getOrdersLoadingStatus);
+    const { name, surname, email, tel } = useSelector(getUserData);
 
-    return <div>
-        <AppButton
-            title="Редактировать"
+    return <div className="relative ">
+        <div
+            className="absolute right-0 w-4 h-4 cursor-pointer"
+            style={{
+                background: `url(${settingsIcon}) no-repeat center/contain`
+            }}
             onClick={onEdit}
         />
-        <p>{name}</p>
-        <p>{surname}</p>
-        <p>{email}</p>
-        {isOrdersLoading
-            ? <div>Loading...</div>
-            : orders && orders.map(order => <div key={order._id}>
-                <Link to={`/order/${order._id}`}>Заказ от {new Date(order.createdAt).toLocaleString()}</Link>
-            </div>)}
+        <p className="uppercase text-lg">{name} {surname}</p>
+        <p className="uppercase text-lg">{email}</p>
+        <p className="uppercase text-lg">{tel}</p>
     </div>;
 };
 

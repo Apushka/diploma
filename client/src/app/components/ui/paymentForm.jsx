@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { createOrder } from "../../store/orders";
 import { paymentFormatter } from "../../utils/paymentFormatter";
 import { validator } from "../../utils/validator";
-import AppButton from "../common/buttonBlack";
+import AppButton from "../common/appButton";
 import TextField from "../common/form/textField";
 
 const PaymentForm = () => {
@@ -80,36 +80,38 @@ const PaymentForm = () => {
     };
 
     return <form onSubmit={handleSubmit}>
-        <TextField
-            label="Номер карты"
-            type="number"
-            placeholder="0000 0000 0000 0000"
-            name="cardNumber"
-            value={data.cardNumber}
-            onChange={handleChange}
-            error={errors.cardNumber} />
-        <TextField
-            label="Срок окончания"
-            placeholder="00/00"
-            name="expiryDate"
-            value={data.expiryDate}
-            onChange={handleChange}
-            error={errors.expiryDate} />
-        <TextField
-            label="CVV"
-            placeholder="000"
-            type="number"
-            name="code"
-            value={data.code}
-            onChange={handleChange}
-            error={errors.code} />
-        <TextField
-            label="Имя владельца (латиницей)"
-            placeholder="Ivan Ivanov"
-            name="cardholderName"
-            value={data.cardholderName}
-            onChange={handleChange}
-            error={errors.cardholderName} />
+        <div className="mx-auto w-full md:w-1/2">
+            <TextField
+                label="Номер карты"
+                type="number"
+                placeholder="0000 0000 0000 0000"
+                name="cardNumber"
+                value={data.cardNumber}
+                onChange={handleChange}
+                error={errors.cardNumber} />
+            <TextField
+                label="Срок окончания"
+                placeholder="00/00"
+                name="expiryDate"
+                value={data.expiryDate}
+                onChange={handleChange}
+                error={errors.expiryDate} />
+            <TextField
+                label="CVV"
+                placeholder="000"
+                type="number"
+                name="code"
+                value={data.code}
+                onChange={handleChange}
+                error={errors.code} />
+            <TextField
+                label="Имя владельца (латиницей)"
+                placeholder="Ivan Ivanov"
+                name="cardholderName"
+                value={data.cardholderName}
+                onChange={handleChange}
+                error={errors.cardholderName} />
+        </div>
         <AppButton
             onClick={handleSubmit}
             title="Оплатить"

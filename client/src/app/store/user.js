@@ -97,7 +97,15 @@ export const signUp =
             dispatch(authRequestSuccess(data.userId));
             history.push(redirect);
         } catch (e) {
-            dispatch(authRequestFailed(e.message));
+            const { code, message } = e.response.data.error;
+            if (code === 400) {
+                const errorMessage = generateAuthError(message);
+                dispatch(authRequestFailed(errorMessage));
+                toast.error(errorMessage);
+            } else {
+                dispatch(authRequestFailed(e.message));
+                toast.error(e.message);
+            }
         }
     };
 
@@ -116,8 +124,10 @@ export const logIn =
             if (code === 400) {
                 const errorMessage = generateAuthError(message);
                 dispatch(authRequestFailed(errorMessage));
+                toast.error(errorMessage);
             } else {
                 dispatch(authRequestFailed(e.message));
+                toast.error(e.message);
             }
         }
     };
@@ -157,6 +167,18 @@ export const updateUserData = (payload) => async (dispatch) => {
     } catch (e) {
         toast.error("Не удалось обновить информацию");
         dispatch(userDataUpdateFailed(e.message));
+    }
+};
+
+export const deleteUser = (payload) => async (dispatch) => {
+    try {
+        await userService.delete(payload);
+        history.push("/profile/remove/success");
+    } catch (e) {
+        const { code } = e.response.data.error;
+        if (code === 403) {
+            toast.error("Неправильный логин или пароль");
+        }
     }
 };
 

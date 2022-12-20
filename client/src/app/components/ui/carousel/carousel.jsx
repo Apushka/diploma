@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
-import { getCollectionByPath, loadCollection } from "../../store/collections";
-import ProductCard from "./productCard";
-import storageService from "../../services/localStorage.service";
+import { getCollectionByPath, loadCollection } from "../../../store/collections";
+import ProductCard from "../productCard";
+import storageService from "../../../services/localStorage.service";
+import Slider from "./slider";
 
 const Carousel = ({ filter, options }) => {
     const [currentOption, setCurrentOption] = useState(storageService.getCarouselTab(filter) || options[0]);
@@ -29,8 +30,8 @@ const Carousel = ({ filter, options }) => {
         }
     }, [collection]);
 
-    return <div>
-        <nav className="flex gap-12 justify-center mb-8">
+    return <div className="mb-8">
+        <nav className="flex gap-12 justify-center mb-5">
             {options.map(option => <button
                 key={option._id}
                 className={"uppercase tracking-wider font-light " + (option._id === currentOption._id ? "font-normal underline" : "")}
@@ -43,11 +44,10 @@ const Carousel = ({ filter, options }) => {
             {!collection
                 ? !prevState.current
                     ? <ProductCard.Skeleton />
-                    : prevState.current.map(productId =>
-                        <div className="opacity-50" key={productId}>
-                            <ProductCard productId={productId} />
-                        </div>)
-                : collection.map(productId => <ProductCard key={productId} productId={productId} />)}
+                    : <div className="opacity-50">
+                        <Slider collection={prevState.current} />
+                    </div>
+                : <Slider collection={collection} />}
         </div>
     </div>;
 };

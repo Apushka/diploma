@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import searchIcon from "../../../assets/search.png";
+import HeaderNavIcon from "../header/headerNavIcon";
 import SearchForm from "./searchForm";
 
 const NavSearch = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    return <div className="text-black relative">
+    return <div className="text-black relative w-4 h-4">
         {isOpen
-            ? <SearchForm onClose={() => setIsOpen(false)} />
-            : <span
+            ? <span
+                className="absolute w-56 -top-0.5 right-0 z-20">
+                <SearchForm onClose={() => setIsOpen(false)} />
+            </span>
+            : <HeaderNavIcon
+                iconUrl={searchIcon}
                 onClick={() => setIsOpen(true)}
-                style={{
-                    background: `url(${searchIcon}) no-repeat center/contain`,
-                    filter: "invert(1)"
-                }}
-                className="block w-6 h-6 cursor-pointer"
-            ></span>}
-    </div>;
+            />
+        }
+    </div >;
 };
 
 export default NavSearch;

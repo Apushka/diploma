@@ -1,68 +1,60 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { getCategoriesList } from "../../store/categories";
+import { getProductsList } from "../../store/products";
+import { getTagsList } from "../../store/tags";
 
-// const breadCrumbsSchema = {
-//     "": "Главная",
-//     makeup: "Макияж",
-//     face: "Лицо",
-//     brows: "Брови",
-//     nails: "Ногти",
-//     eyes: "Глаза",
-//     lips: "Губы",
-//     actions: "Акции",
-//     novelties: "Новинки",
-//     about: "О Бренде",
-//     skincare: "Уход за кожей",
-//     bestsellers: "Бестселлеры",
-//     accessories: "Аксессуары",
-//     face_primers: "Праймеры",
-//     face_tones: "Тональные средства",
-//     face_concealers: "Корректоры/Консилеры",
-//     face_powders: "Пудра",
-//     face_blushers: "Румяна",
-//     face_highlighters: "Скульптор/Хайлайтер",
-//     face_fixators: "Фиксаторы (для макияжа)",
-//     face_brushes: "Кисти для лица/спонжи",
-//     brows_gels: "Гели для бровей",
-//     brows_shadows: "Тени для бровей",
-//     brows_pencils: "Карандаши  и маркеры",
-//     brows_brushes: "Кисти для бровей",
-//     nails_polish: "Лаки для ногтей",
-//     nails_bases: "Базы и покрытия для ногтей",
-//     nails_care: "Уход за ногтями",
-//     nails_accessories: "Аксессуары для маникюра",
-//     eyes_mascara: "Тушь для ресниц",
-//     eyes_bases: "Основа под тени",
-//     eyes_shadows: "Тени для век",
-//     eyes_pencils: "Карандаши  и подводки",
-//     eyes_brushes: "Кисти для глаз",
-//     lips_lipsticks: "Помады",
-//     lips_tints: "Блески и тинты",
-//     lips_pencils: "Карандаши для губ",
-//     lips_balms: "Бальзамы для губ",
-//     lips_brushes: "Кисти для губ",
-//     accessories_brushes: "Кисти/Спонжи",
-//     accessories_other: "Другое"
-// };
+const defaultRoutes = {
+    "": "Главная",
+    catalog: "Каталог",
+    shops: "Магазины"
+};
 
 const BreadCrumbs = () => {
-    const params = useParams();
     const location = useLocation();
-    const [breadcrumbs] = useState([]);
+    const [breadcrumbs, setBreadcrumbs] = useState([]);
     const categories = useSelector(getCategoriesList);
-    console.log(categories);
+    const tags = useSelector(getTagsList);
+    const products = useSelector(getProductsList);
 
     useEffect(() => {
+        const routes = { ...defaultRoutes };
+        categories.forEach(c => {
+            routes[c.path] = c.name;
+        });
+        tags.forEach(c => {
+            routes[c.path] = c.name;
+        });
+        Object.values(products).forEach(p => {
+            routes[p._id] = p.title;
+        });
 
-    }, [params, location]);
+        const breads = [{
+            to: "/",
+            breadcrumb: routes[""]
+        }];
 
-    return <div className="h-7">
-        {breadcrumbs.map((br, index) => <Link
-            className={index === breadcrumbs.length - 1 ? "font-bold" : ""}
-            to={br.to}
-            key={br.to}>{br.breadcrumb}</Link>)}
+        const { pathname } = location;
+        const params = pathname.split("/").filter(param => param);
+        params.forEach(param => {
+            const to = "/" + pathname.substring(1, pathname.indexOf(param) + param.length);
+            breads.push({
+                to,
+                breadcrumb: routes[param]
+            });
+        });
+
+        setBreadcrumbs(breads);
+    }, [location, tags, categories, products]);
+
+    return <div className="mb-2">
+        {breadcrumbs.map((br, index) => <span key={br.to}>
+            <Link
+                className={"uppercase text-xs" + (index === breadcrumbs.length - 1 ? "font-bold underline" : "")}
+                to={br.to}>{br.breadcrumb}</Link>
+            {index !== breadcrumbs.length - 1 && <span className="mx-3">/</span>}
+        </span>)}
     </div>;
 };
 

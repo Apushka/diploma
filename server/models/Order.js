@@ -2,6 +2,10 @@ const { Schema, model } = require("mongoose");
 
 const schema = new Schema(
   {
+    _id: {
+      type: String,
+      required: true,
+    },
     products: [
       {
         product: { type: Schema.Types.ObjectId, ref: "Product" },
@@ -55,6 +59,10 @@ const schema = new Schema(
       type: String,
     },
     index: {
+      type: String,
+      required: true,
+    },
+    total: {
       type: String,
       required: true,
     },

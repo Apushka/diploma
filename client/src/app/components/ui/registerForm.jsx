@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signUp } from "../../store/user";
 import { validator } from "../../utils/validator";
-import AppButton from "../common/buttonBlack";
+import AppButton from "../common/appButton";
 import TextField from "../common/form/textField";
 
 const RegisterForm = () => {
@@ -14,13 +14,16 @@ const RegisterForm = () => {
         tel: "",
         password: ""
     });
+    const [isTrySubmit, setIsTrySubmit] = useState(false);
     const [errors, setErrors] = useState({});
     const isValid = Object.keys(errors).length === 0;
     const dispatch = useDispatch();
     const history = useHistory();
 
     useEffect(() => {
-        validate();
+        if (isTrySubmit) {
+            validate();
+        }
     }, [data]);
 
     const validatorConfig = {
@@ -84,6 +87,7 @@ const RegisterForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setIsTrySubmit(true);
         const isValid = validate();
         if (!isValid) return;
         const redirect = history.location.state
@@ -128,7 +132,7 @@ const RegisterForm = () => {
             error={errors.password} />
         <AppButton
             type="submit"
-            title="Submit"
+            title="Зарегистрироваться"
             isDisabled={!isValid} />
     </form>;
 };

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import Loader from "../components/common/loader";
 import { logOut } from "../store/user";
 
 const Logout = () => {
@@ -9,7 +10,7 @@ const Logout = () => {
         dispatch(logOut());
     }, []);
 
-    return <div>Loading...</div>;
+    return <Loader />;
 };
 
 export default Logout;

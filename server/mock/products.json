@@ -2,68 +2,145 @@
   {
     "description": "Идеальная тушь для настоящих фанатов подкрученных и объёмных ресниц!\n\nшироко распахнутый взгляд\n\nневероятный объём\n\nворсовая щеточка\n\nспециальная формула туши \nидеально подойдёт любым ресничкам, обеспечивая легкое нанесение без склеивания\n\n",
     "title": "Тушь для ресниц веерный объем Paradiso",
-    "image": "https://avatars.dicebear.com/api/avataaars/vyum5.svg",
+    "image": "https://relouis.by/wp-content/uploads/2022/05/MuCrush_Y1.jpg",
     "category": "eyes_mascara",
-    "tags": ["63867efd59df53bcdc5e4dea"]
+    "tags": ["63867efd59df53bcdc5e4dea"],
+    "price": "22.80"
   },
   {
     "description": "THERMO TUBING\nИнновационная формула позволяет смывать тушь теплой водой без средств для снятия макияжа\n\nтушь отлично носится в течение дня! \nНе осыпается, не смазывается, не отпечатывается!\n\nэффектный объём и разделение\n\nПластиковая щетка \n\nбережно относится к ресницам\nне травмирует их благодаря деликатному удалению\n\nVegan- формула",
-    "title": "Тушь для ресниц объемная Strip it Easy Thermo Tubing",
-    "image": "https://avatars.dicebear.com/api/avataaars/g4pgg.svg",
+    "title": "Easy Thermo Tubing",
+    "image": "https://relouis.by/wp-content/uploads/2022/03/Strip-it-Easy-1200_7.jpg",
     "category": "eyes_mascara",
-    "tags": ["63867efd59df53bcdc5e4dea", "63867efd59df53bcdc5e4deb"]
+    "tags": ["63867efd59df53bcdc5e4dea", "63867efd59df53bcdc5e4deb"],
+    "price": "25.90"
   },
   {
     "description": "Универсальная стойкая матовая помада \n\nроскошная гамма нюдовых оттенков\n\nмягкая муссовая текстура \nлегко наносится, не стягивает и не сушит кожу губ\n\nневесомое покрытие без разводов\n",
     "title": "Помада губная жидкая матовая Nude Matte",
-    "image": "https://avatars.dicebear.com/api/avataaars/k17xo.svg",
+    "image": "https://relouis.by/wp-content/uploads/2021/02/Pomada-zhidkaya-matovaya-Nude-Matte-10.jpg",
     "category": "lips_lipsticks",
-    "tags": ["63867efd59df53bcdc5e4dea"]
+    "tags": ["63867efd59df53bcdc5e4dea"],
+    "price": "27.20"
   },
   {
     "description": "СЕНСАЦИОННАЯ НОВИНКА!\nБудь разной! Будь смелой! Будь яркой! Будь особенной!\n\nобъёмная\n\nпластиковая щеточка\nпрекрасно наносит тушь, распределяет ее от корней до кончиков и прочесывает ресницы\n\nИспользуй в макияже один или несколько оттенков\nкомбинируй, фантазируй, твори!\n\n\n",
     "title": "Тушь для ресниц цветная объемная My Crush",
-    "image": "https://avatars.dicebear.com/api/avataaars/5w8m4.svg",
+    "image": "https://relouis.by/wp-content/uploads/2022/05/MuCrush_Y1.jpg",
     "category": "eyes_mascara",
-    "tags": ["63867efd59df53bcdc5e4dec"]
+    "tags": ["63867efd59df53bcdc5e4dec"],
+    "price": "19.10"
   },
   {
     "description": "суперобъем и разделениесиликоновая щеточкатщательно подобрана для суперточного разделения и равномерного распределения туши по всей длинеКоричневая тушь - идеальный вариант для дневного макияжа и девушек неяркой внешности: русым, блондинкам. шикарно подчёркивает голубые, серые, зелёные глазаЧёрная тушь- классика, которая сделает твой взгляд выразительным и распахнутым!",
     "title": "Тушь для ресниц Touché суперобъём и разделение",
-    "image": "https://avatars.dicebear.com/api/avataaars/t6f9ql.svg",
+    "image": "https://relouis.by/wp-content/uploads/2021/06/Touche-Brown-flakon.jpg",
     "category": "eyes_mascara",
-    "tags": ["63867efd59df53bcdc5e4deb"]
+    "tags": ["63867efd59df53bcdc5e4deb"],
+    "price": "18.30"
   },
   {
-    "description": "эффект накладных ресниц\n\nЭкстремальный объём\n\nпластиковая кисточка\nсделает ресницы аккуратными, а взгляд выразительным",
-    "title": "Тушь с эффектом накладных ресниц \"Professional\"",
-    "image": "https://avatars.dicebear.com/api/avataaars/ljobv.svg",
+    "description": "матовая помада с бархатным финишем\n\nощущается комфортно и держится весь день\n\n16 трендовых оттенков \nот самых модных нюдовых и коричневых до более насыщенных красного и бордового оттенков\n\nНасыщенный цвет с первого нанесения и визуальное увеличение объёма губ\n\nмягкий удобный и идеально скользящий аппликатор плоской формы \nбезупречно наносит помаду, распределяет её равномерно с первого нанесения и позволяет создать максимально четкий контур\n\nприятный аромат \nподарит вам истинное удовольствие",
+    "title": "Помада для губ стойкая матовая Paradiso",
+    "image": "https://relouis.by/wp-content/uploads/2017/04/Pomada-gubnaya-matovaya-Alta-Moda-01-2.jpg",
+    "price": "28.20",
+    "category": "lips_lipsticks"
+  },
+  {
+    "description": "Абсолютно матовый эффект, без намека на блеск и сияние\n\nПолностью перекрывает цвет губ с первого нанесения\n\nТолько яркие и смелые оттенки, без полутонов и без компромиссов\n\nСтойкий цвет\n\nКомфортна и неощутима \n\nvegan friendly",
+    "title": "Помада губная жидкая матовая True Matte",
+    "image": "https://relouis.by/wp-content/uploads/2021/02/Pomada-zhidkaya-matovaya-True-Matte-01.jpg",
+    "category": "lips_lipsticks",
+    "price": "12.50"
+  },
+  {
+    "description": "Тональное средство с комфортной текстурой для любого типа кожи\n\n24 часа стойкости\nчто делает текстуру идеальной для любого случая\n\nЗащита SPF30\nнаиболее универсальный уровень защиты как летом, так и зимой\n\nЕСТЕСТВЕННЫЙ МАТОВЫЙ ФИНИШ\n\nТекстура флюид\nне сушит кожу, не течёт, не скатывается, не забивает поры, Фиксируется на весь день\nбез эффекта маски\n\nfacetune эффект\nпомогает коже выглядеть идеально на фото\n\nVegan\nне содержит масел",
+    "title": "Тональный крем RELOUIS PRO Face&Body Foundation 24H SPF30",
+    "image": "https://relouis.by/wp-content/uploads/2022/08/RePro-TonCrem-FL-1C-1200.jpg",
     "category": "face_tones",
-    "tags": ["63867efd59df53bcdc5e4dec", "63867efd59df53bcdc5e4dea"]
+    "price": "19.10",
+    "tags": ["63867efd59df53bcdc5e4deb", "63867efd59df53bcdc5e4dec"]
+  },
+  {
+    "description": "для подготовки кожи \nк нанесению макияжа и создания идеальной поверхности для тонального средства\n\nнейтрализует жирный блеск в области Т-зоны\n\nделает кожу матово-бархатистой\n\n\n\n",
+    "title": "Основа под макияж Prime Step Anti - redness Professional RELOUIS",
+    "image": "https://relouis.by/wp-content/uploads/2017/04/Osnova-pod-makiyazh-Prime-Step_Anti-redness.jpg",
+    "category": "face_tones",
+    "price": "12.50"
   },
   {
     "description": "Объёмная\n\nВодостойкая\nв дождь и непогоду, в бассейне, сауне и на пляже — Ваши ресницы всегда остаются объёмными!\n\nухаживающий эффект\nтушь имеет в своём составе бисаболол\n\nЛегкий демакияж\nТушь следует удалять двухфазным средством для снятия водостойкого макияжа\n",
-    "title": "Тушь для ресниц водостойкая Emotion Proof",
-    "image": "https://avatars.dicebear.com/api/avataaars/qhpr4.svg",
+    "title": "База Emotion Proof",
+    "image": "https://relouis.by/wp-content/uploads/2017/11/Tush-dlya-resnits-vodostojkaya-EmotionProof-_web.jpg",
     "category": "face_primers",
-    "tags": ["63867efd59df53bcdc5e4deb", "63867efd59df53bcdc5e4dea"]
+    "price": "47.90"
   },
   {
-    "description": "эффект сценического объема\n\nэкстра черный цвет твоих ресниц\n\nВорсовая щеточка \nпозволяет добиться впечатляющего эффекта для ресниц - она окрашивает и удлиняет каждую ресницу, формируя ее объем от корней до самых кончиков\n",
-    "title": "Тушь для ресниц  с эффектом сценического объема Delicious Dramatic Decision",
-    "image": "https://avatars.dicebear.com/api/avataaars/nmgd4.svg",
-    "category": "face_concealers"
+    "description": "мягкая и шелковистая текстура\nтени прекрасно набираются на кисть и растушевываются на коже\n\nвысокая пигментированность\n\nстойкость\nбудьте уверены в макияже на протяжении дня\n\nуниверсальная цветовая гамма\nтеплые и холодные базовые тона, а также оттенки для акцентов\n\nделикатное свечение\n\nлегкость нанесения\n\nкоррекция формы глаз\nтона 31 ICE-CREAM и 32 ROSE QUARTZ используйте как хайлайтер в изгибе брови, во внутреннем уголке и в центре века\n",
+    "title": "Тени для век RELOUIS PRO Eyeshadow Satin",
+    "image": "https://relouis.by/wp-content/uploads/2021/12/applikator-Teni-dlya-vek-zhidkie-satinovye-RELOUIS-PRO-20.jpg",
+    "category": "face_highlighters",
+    "price": "27.20"
   },
   {
-    "description": "Exctreme\nэкстремальный, смелый объём\n\nExciting\nВолнующий, вдохновляющий изгиб\n\nExclusive\nЭксклюзивная, неповторимая длина\n\nLuxury\nРоскошный, чарующий взгляд\n\nЭлегантная пластиковая щёточка\nпрокрашивает каждую ресничку",
-    "title": "Тушь для ресниц \" XXXL Extreme Exciting Exclusive Luxury\"",
-    "image": "https://avatars.dicebear.com/api/avataaars/ok4hc.svg",
-    "category": "face_powders"
+    "description": "Идеальная тушь для настоящих фанатов подкрученных и объёмных ресниц!\n\nшироко распахнутый взгляд\n\nневероятный объём\n\nворсовая щеточка\n\nспециальная формула туши \nидеально подойдёт любым ресничкам, обеспечивая легкое нанесение без склеивания\n\n",
+    "title": "Тушь для ресниц веерный объем Paradiso",
+    "image": "https://relouis.by/wp-content/uploads/2022/05/MuCrush_Y1.jpg",
+    "category": "eyes_mascara",
+    "tags": ["63867efd59df53bcdc5e4dea"],
+    "price": "22.80"
   },
   {
-    "description": "extra объём\n\nextra удлинение\n\nпластиковая щёточка\nзахватывает и прокрашивает все ресницы, даже самые короткие и тонкие",
-    "title": "Тушь для ресниц Extra Lash",
-    "image": "https://avatars.dicebear.com/api/avataaars/aviz4.svg",
-    "category": "face_highlighters"
+    "description": "THERMO TUBING\nИнновационная формула позволяет смывать тушь теплой водой без средств для снятия макияжа\n\nтушь отлично носится в течение дня! \nНе осыпается, не смазывается, не отпечатывается!\n\nэффектный объём и разделение\n\nПластиковая щетка \n\nбережно относится к ресницам\nне травмирует их благодаря деликатному удалению\n\nVegan- формула",
+    "title": "Strip it Easy Thermo Tubing",
+    "image": "https://relouis.by/wp-content/uploads/2022/03/Strip-it-Easy-1200_7.jpg",
+    "category": "eyes_mascara",
+    "tags": ["63867efd59df53bcdc5e4dea", "63867efd59df53bcdc5e4deb"],
+    "price": "25.90"
+  },
+  {
+    "description": "СЕНСАЦИОННАЯ НОВИНКА!\nБудь разной! Будь смелой! Будь яркой! Будь особенной!\n\nобъёмная\n\nпластиковая щеточка\nпрекрасно наносит тушь, распределяет ее от корней до кончиков и прочесывает ресницы\n\nИспользуй в макияже один или несколько оттенков\nкомбинируй, фантазируй, твори!\n\n\n",
+    "title": "Тушь для ресниц цветная объемная My Crush",
+    "image": "https://relouis.by/wp-content/uploads/2022/05/MuCrush_Y1.jpg",
+    "category": "face_powders",
+    "tags": ["63867efd59df53bcdc5e4deb"],
+    "price": "19.10"
+  },
+  {
+    "description": "суперобъем и разделениесиликоновая щеточкатщательно подобрана для суперточного разделения и равномерного распределения туши по всей длинеКоричневая тушь - идеальный вариант для дневного макияжа и девушек неяркой внешности: русым, блондинкам. шикарно подчёркивает голубые, серые, зелёные глазаЧёрная тушь- классика, которая сделает твой взгляд выразительным и распахнутым!",
+    "title": "Тушь для ресниц Touché суперобъём и разделение",
+    "image": "https://relouis.by/wp-content/uploads/2021/06/Touche-Brown-flakon.jpg",
+    "category": "eyes_mascara",
+    "tags": ["63867efd59df53bcdc5e4deb"],
+    "price": "18.30"
+  },
+  {
+    "description": "Тональное средство с комфортной текстурой для любого типа кожи\n\n24 часа стойкости\nчто делает текстуру идеальной для любого случая\n\nЗащита SPF30\nнаиболее универсальный уровень защиты как летом, так и зимой\n\nЕСТЕСТВЕННЫЙ МАТОВЫЙ ФИНИШ\n\nТекстура флюид\nне сушит кожу, не течёт, не скатывается, не забивает поры, Фиксируется на весь день\nбез эффекта маски\n\nfacetune эффект\nпомогает коже выглядеть идеально на фото\n\nVegan\nне содержит масел",
+    "title": "Тональный крем RELOUIS PRO Face&Body Foundation 24H SPF30",
+    "image": "https://relouis.by/wp-content/uploads/2022/08/RePro-TonCrem-FL-1C-1200.jpg",
+    "category": "face_brushes",
+    "price": "19.10",
+    "tags": ["63867efd59df53bcdc5e4deb"]
+  },
+  {
+    "description": "для подготовки кожи \nк нанесению макияжа и создания идеальной поверхности для тонального средства\n\nнейтрализует жирный блеск в области Т-зоны\n\nделает кожу матово-бархатистой\n\n\n\n",
+    "title": "Основа под макияж Prime Step Anti - redness Professional RELOUIS",
+    "image": "https://relouis.by/wp-content/uploads/2017/04/Osnova-pod-makiyazh-Prime-Step_Anti-redness.jpg",
+    "category": "face_fixators",
+    "price": "12.50"
+  },
+  {
+    "description": "Объёмная\n\nВодостойкая\nв дождь и непогоду, в бассейне, сауне и на пляже — Ваши ресницы всегда остаются объёмными!\n\nухаживающий эффект\nтушь имеет в своём составе бисаболол\n\nЛегкий демакияж\nТушь следует удалять двухфазным средством для снятия водостойкого макияжа\n",
+    "title": "База Emotion Proof",
+    "image": "https://relouis.by/wp-content/uploads/2017/11/Tush-dlya-resnits-vodostojkaya-EmotionProof-_web.jpg",
+    "category": "face_fixators",
+    "price": "47.90"
+  },
+  {
+    "description": "мягкая и шелковистая текстура\nтени прекрасно набираются на кисть и растушевываются на коже\n\nвысокая пигментированность\n\nстойкость\nбудьте уверены в макияже на протяжении дня\n\nуниверсальная цветовая гамма\nтеплые и холодные базовые тона, а также оттенки для акцентов\n\nделикатное свечение\n\nлегкость нанесения\n\nкоррекция формы глаз\nтона 31 ICE-CREAM и 32 ROSE QUARTZ используйте как хайлайтер в изгибе брови, во внутреннем уголке и в центре века\n",
+    "title": "Тени для век RELOUIS PRO Eyeshadow Satin",
+    "image": "https://relouis.by/wp-content/uploads/2021/12/applikator-Teni-dlya-vek-zhidkie-satinovye-RELOUIS-PRO-20.jpg",
+    "category": "face_concealers",
+    "price": "27.20"
   }
 ]

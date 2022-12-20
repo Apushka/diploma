@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 import qs from "query-string";
 import { getCollectionByPath, getCollectionLoadingStatus, loadCollection } from "../../store/collections";
 import Catalog from "../ui/catalog";
+import PageHeader from "../ui/pageHeader";
+import PageContent from "../ui/pageContent";
 
 const SearchPage = () => {
     const { search } = useLocation();
@@ -24,14 +26,17 @@ const SearchPage = () => {
         );
     }, [search]);
 
-    if (!collection?.length && !isCollectionLoading) {
-        return <div>Ничего не найдено...</div>;
-    }
-
     return (
         <div className="w-full">
-            <div>{value}</div>
-            {!collection ? <Catalog.Skeleton /> : <Catalog collection={collection} />}
+            <PageHeader title={value} />
+            <PageContent>
+                {!collection?.length && !isCollectionLoading
+                    ? <div>Ничего не найдено...</div>
+                    : <p className="text-xs mb-12">
+                        Количество продуктов: {collection?.length}
+                    </p>}
+                {!collection ? <Catalog.Skeleton /> : <Catalog collection={collection} />}
+            </PageContent>
         </div>
     );
 };

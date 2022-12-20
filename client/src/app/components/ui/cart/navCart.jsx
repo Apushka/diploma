@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { getCart } from "../../../store/cart";
+import { getCartProductsAmount } from "../../../store/cart";
 import cartIcon from "../../../assets/cart.png";
 import Cart from "./cart";
+import HeaderNavIcon from "../header/headerNavIcon";
 
 const NavCart = () => {
-    const cart = useSelector(getCart());
-    const productsQuantity = Object.values(cart).reduce((prev, current) => prev + current, 0);
+    const productsQuantity = useSelector(getCartProductsAmount);
     const [open, setOpen] = useState(false);
     const ref = useRef(null);
     const history = useHistory();
+    const isProducts = productsQuantity > 0;
 
     useEffect(() => {
         let timer;
@@ -26,6 +27,10 @@ const NavCart = () => {
         };
         ref.current.addEventListener("mouseover", over);
         ref.current.addEventListener("mouseleave", leave);
+        return () => {
+            ref.current.removeEventListener("mouseover", over);
+            ref.current.removeEventListener("mouseleave", leave);
+        };
     }, []);
 
     const handleGoToCart = () => {
@@ -33,22 +38,18 @@ const NavCart = () => {
         history.push("/order");
     };
 
-    return <div
-        style={{
-            background: `url(${cartIcon}) no-repeat center/contain`
-        }}
-        className="w-6 h-6"
+    return <span
+        className={"relative " + (productsQuantity > 0 ? "after:absolute after:w-1.5 after:h-1.5 after:top-0 after:bg-red-500 after:rounded-lg" : "")}
         ref={ref}>
-        <p
-            className="relative top-1.5 text-xs cursor-pointer"
-            onClick={handleGoToCart}>
-            {productsQuantity || ""}
-        </p>
-        {productsQuantity > 0 && <div
-            className={`absolute top-20 p-6 ${open ? "right-2" : "-right-[100%]"} border border-solid border-black bg-white text-black z-10`}>
+        <HeaderNavIcon
+            iconUrl={cartIcon}
+            onClick={isProducts ? handleGoToCart : () => { }}
+            pointer={isProducts} />
+        {isProducts && open && <div
+            className={`absolute top-8 p-6 ${open ? "right-0" : "-right-[100%]"} border border-solid border-black bg-white text-black z-10 max-h-[70vh] overflow-scroll`}>
             <Cart onOrder={handleGoToCart} />
         </div>}
-    </div>;
+    </span>;
 };
 
 export default NavCart;

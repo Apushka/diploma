@@ -1,44 +1,42 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import useCategory from "../../hooks/useCategory";
 
-import { getCategoryByPath } from "../../store/categories";
 import {
     getCollectionByPath,
     getCollectionLoadingStatus,
     loadCollection
 } from "../../store/collections";
-// import BreadCrumbs from "../common/breadcrumbs";
+import BreadCrumbs from "../common/breadcrumbs";
 import Catalog from "../ui/catalog";
+import PageContent from "../ui/pageContent";
+import PageHeader from "../ui/pageHeader";
 
 const CatalogPage = () => {
-    const { category } = useParams();
-    const currentCategory = useSelector(getCategoryByPath(category));
+    const { category, queryObject } = useCategory();
     const collection = useSelector(getCollectionByPath(category));
     const isCollectionLoading = useSelector(getCollectionLoadingStatus);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (!collection) {
+        if (!collection && queryObject) {
             dispatch(
-                loadCollection({
-                    field: "category",
-                    value: currentCategory._id,
-                    path: category
-                })
-            );
+                loadCollection(queryObject));
         }
-    }, [category]);
-
-    if (!collection?.length && !isCollectionLoading) {
-        return <div>Ничего не найдено...</div>;
-    }
+    }, [queryObject]);
 
     return (
         <div className="w-full">
-            {/* <BreadCrumbs /> */}
-            <div>{currentCategory.name}</div>
-            {!collection ? <Catalog.Skeleton /> : <Catalog collection={collection} />}
+            <PageHeader title={queryObject?.name} />
+            <PageContent >
+                <BreadCrumbs />
+                {!collection?.length && !isCollectionLoading
+                    ? <div>Ничего не найдено...</div>
+                    : <p className="text-xs mb-12">
+                        Количество продуктов: {collection?.length}
+                    </p>}
+                {!collection ? <Catalog.Skeleton /> : <Catalog collection={collection} />}
+            </PageContent>
         </div>
     );
 };

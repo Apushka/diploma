@@ -16,6 +16,12 @@ const userService = {
             payload
         );
         return data;
+    },
+    delete: async (payload) => {
+        const { data } = await httpService.delete(userEndpoint + payload._id, {
+            data: payload
+        });
+        return data;
     }
 };
 

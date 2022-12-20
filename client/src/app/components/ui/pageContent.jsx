@@ -1,0 +1,14 @@
+import React from "react";
+import PropTypes from "prop-types";
+
+const PageContent = ({ children }) => {
+    return <div className="p-6 mb-6 min-h-[70vh]">
+        {children}
+    </div>;
+};
+
+PageContent.propTypes = {
+    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
+};
+
+export default PageContent;

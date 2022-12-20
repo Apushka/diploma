@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import { validator } from "../../utils/validator";
-import AppButton from "../common/buttonBlack";
+import AppButton from "../common/appButton";
 import SelectField from "../common/form/selectField";
 import TextField from "../common/form/textField";
 import { getDeliveryLists, getDeliveryLoadingStatus, loadDeliveryLists } from "../../store/delivery";
+import Loader from "../common/loader";
 
 const DeliveryForm = ({ onProceed }) => {
     const isDeliveryLoading = useSelector(getDeliveryLoadingStatus);
@@ -87,58 +88,61 @@ const DeliveryForm = ({ onProceed }) => {
     };
 
     if (isDeliveryLoading) {
-        return <div>Loading...</div>;
+        return <Loader />;
     }
 
     return <form>
-        <SelectField
-            defaultOption="Выбрать страну"
-            options={countriesList}
-            name="country"
-            onChange={handleChange}
-            value={data.country}
-            error={errors.country}
-        />
-        <SelectField
-            defaultOption="Выбрать город"
-            options={citiesList}
-            name="city"
-            onChange={handleChange}
-            value={data.city}
-            error={errors.city}
-        />
-        <TextField
-            name="street"
-            value={data.street}
-            placeholder="Улица"
-            onChange={handleChange}
-            error={errors.street} />
-        <TextField
-            name="address"
-            value={data.address}
-            type="number"
-            placeholder="Дом"
-            onChange={handleChange}
-            error={errors.address} />
-        <TextField
-            name="building"
-            value={data.building}
-            placeholder="Корпус"
-            onChange={handleChange}
-            error={errors.building} />
-        <TextField
-            name="apartment"
-            value={data.apartment}
-            placeholder="Квартира"
-            onChange={handleChange}
-            error={errors.apartment} />
-        <TextField
-            name="index"
-            value={data.index}
-            type="number"
-            placeholder="Индекс"
-            onChange={handleChange}
-            error={errors.index} />
+        <div className="mx-auto w-full md:w-1/2">
+
+            <SelectField
+                defaultOption="Выбрать страну"
+                options={countriesList}
+                name="country"
+                onChange={handleChange}
+                value={data.country}
+                error={errors.country}
+            />
+            <SelectField
+                defaultOption="Выбрать город"
+                options={citiesList}
+                name="city"
+                onChange={handleChange}
+                value={data.city}
+                error={errors.city}
+            />
+            <TextField
+                name="street"
+                value={data.street}
+                label="Улица"
+                onChange={handleChange}
+                error={errors.street} />
+            <TextField
+                name="address"
+                value={data.address}
+                type="number"
+                label="Дом"
+                onChange={handleChange}
+                error={errors.address} />
+            <TextField
+                name="building"
+                value={data.building}
+                label="Корпус"
+                onChange={handleChange}
+                error={errors.building} />
+            <TextField
+                name="apartment"
+                value={data.apartment}
+                label="Квартира"
+                onChange={handleChange}
+                error={errors.apartment} />
+            <TextField
+                name="index"
+                value={data.index}
+                type="number"
+                label="Индекс"
+                onChange={handleChange}
+                error={errors.index} />
+        </div>
         <AppButton
             onClick={handleSubmit}
             title="Продолжить"

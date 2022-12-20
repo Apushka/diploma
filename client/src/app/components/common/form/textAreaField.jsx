@@ -7,10 +7,12 @@ const TextAreaField = ({ label, type, name, value, onChange, placeholder }) => {
     };
 
     return (<div className="mb-4">
-        {label && <label htmlFor={label}>{label}</label>}
+        {label && <label
+            className="block uppercase mb-2"
+            htmlFor={label}>{label}</label>}
         <div className="input-group has-validation">
             <textarea
-                className="border border-solid border-black"
+                className="border border-solid border-black w-full focus:outline-none rounded-lg px-2 mb-1"
                 type={type}
                 id={name}
                 value={value}

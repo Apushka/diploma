@@ -1,16 +1,17 @@
 import React from "react";
 import NavBar from "./navbar";
-import { Link } from "react-router-dom";
-import NavSearch from "../search/NavSearch";
+import logoIcon from "../../../assets/logo.png";
+import NavSearch from "../search/navSearch";
 import NavAccount from "./navAccount";
 import NavCart from "../cart/navCart";
+import HeaderNavIcon from "./headerNavIcon";
 
 const Header = () => {
     return (
-        <header className="bg-rblack flex relative justify-between text-rwhite p-6">
-            <Link to="/">LOGO</Link>
+        <header className="bg-black flex relative justify-between items-center text-white px-3 py-2">
+            <HeaderNavIcon iconUrl={logoIcon} to="/" />
             <NavBar />
-            <div className="flex items-center gap-5">
+            <div className="flex gap-5">
                 <NavSearch />
                 <NavAccount />
                 <NavCart />

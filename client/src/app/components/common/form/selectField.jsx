@@ -5,9 +5,9 @@ const SelectField = ({ value, onChange, defaultOption, options, error, name }) =
     const handleChange = ({ target }) => {
         onChange({ name: target.name, value: target.value });
     };
-    return <div>
+    return <div className="mb-3">
         <select
-            className="border border-solid border-black"
+            className="uppercase focus:outline-none rounded-lg px-2 mb-1"
             id={name}
             value={value}
             name={name}
@@ -18,7 +18,8 @@ const SelectField = ({ value, onChange, defaultOption, options, error, name }) =
             </option>
 
             {options.length > 0 && options.map(option => <option
-                value={option._id} key={option._id}>
+                value={option._id}
+                key={option._id}>
                 {option.name}
             </option>)}
         </select>

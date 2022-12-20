@@ -5,9 +5,10 @@ import PropTypes from "prop-types";
 const HeaderNavLink = ({ to, children }) => {
     return (
         <NavLink
-            activeClassName="after:absolute after:content-[''] after:w-full after:h-0 after:border-4 after:-bottom-6 after:left-0 after:rounded-t-lg after:border-white"
-            className="relative"
-            to={to}>
+            activeClassName="after:border after:border-1 after:-bottom-2 after:border-gray-400 after:absolute after:content-[''] after:w-full after:h-0 lg:after:border-2 lg:after:-bottom-3 after:left-0 after:rounded-t-lg lg:after:border-white"
+            className="relative uppercase"
+            to={to}
+            exact>
             {children}
         </NavLink>
     );

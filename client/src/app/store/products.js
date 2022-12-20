@@ -39,6 +39,8 @@ export const getProductsByIds = (ids) => (state) => {
     return ids.map((id) => state.products.entities[id]);
 };
 
+export const getProductsList = (state) => state.products.entities;
+
 export const getError = () => (state) => state.products.error;
 
 export const loadProducts = (ids) => async (dispatch) => {

@@ -8,6 +8,7 @@ import { getTagsLoadingStatus, loadTagsList } from "../store/tags";
 import { getCart } from "../store/cart";
 import { loadOrdersList } from "../store/orders";
 import { getShopsLoadingStatus, loadShopsList } from "../store/shops";
+import Loader from "../components/common/loader";
 
 const AppLoader = ({ children }) => {
     const currentIserId = useSelector(getCurrentUserId);
@@ -30,7 +31,9 @@ const AppLoader = ({ children }) => {
     }, [currentIserId]);
 
     if (isCategoriesLoading || isTagsLoading || isUserDataLoading || isShopsLoading) {
-        return <div>Loading...</div>;
+        return <div className="flex items-center justify-center min-h-screen">
+            <Loader />
+        </div>;
     }
 
     return children;

@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import arrowIcon from "../../../assets/arrow.png";
 
-const AccordionItem = ({ title, onToggle, isActive, component }) => {
+const AccordionItem = ({ title, onToggle, isActive, isAvailable, component }) => {
     const ref = useRef();
     const [style, setStyle] = useState({
         height: "0px"
@@ -11,7 +12,7 @@ const AccordionItem = ({ title, onToggle, isActive, component }) => {
         setTimeout(() => {
             setStyle(isActive
                 ? {
-                    height: ref.current.scrollHeight + 300 + "px"
+                    height: ref.current.scrollHeight + "px"
                 }
                 : {
                     height: "0px"
@@ -19,11 +20,17 @@ const AccordionItem = ({ title, onToggle, isActive, component }) => {
         }, 100);
     }, [isActive]);
 
-    return <div>
+    return <div className={"mb-6 border-b-2 border-black " + (!isAvailable ? "opacity-30" : "")}>
         <button
-            onClick={onToggle}>
+            className={"text-lg uppercase tracking-widest mb-3 " + (!isAvailable ? "cursor-default" : "")}
+            onClick={isAvailable ? onToggle : null}>
             {title}
-            <span>{isActive ? "-" : "+"}</span>
+            <span
+                style={{
+                    background: `url(${arrowIcon}) no-repeat center/contain`
+                }}
+                className={"inline-block w-3 h-3 mx-2 " + (isActive ? "rotate-180" : "")}
+            />
         </button>
         <div
             ref={ref}
@@ -38,7 +45,8 @@ AccordionItem.propTypes = {
     title: PropTypes.string,
     onToggle: PropTypes.func,
     isActive: PropTypes.bool,
-    component: PropTypes.node
+    component: PropTypes.node,
+    isAvailable: PropTypes.bool
 };
 
 export default AccordionItem;

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import PropTypes from "prop-types";
 import { getUserData, updateUserData } from "../../store/user";
 import { validator } from "../../utils/validator";
-import AppButton from "../common/buttonBlack";
+import AppButton from "../common/appButton";
 import TextField from "../common/form/textField";
 
 const ProfileForm = ({ onFinish }) => {
@@ -60,34 +60,38 @@ const ProfileForm = ({ onFinish }) => {
     };
 
     return <form onSubmit={handleSubmit}>
-        <AppButton
-            type="button"
-            title="Отмена"
-            onClick={onFinish} />
-        <AppButton
-            type="submit"
-            title="Сохранить"
-            isDisabled={!isValid} />
-        <TextField
-            label="Имя"
-            name="name"
-            value={data.name}
-            onChange={handleChange}
-            error={errors.name} />
-        <TextField
-            label="Фамилия"
-            name="surname"
-            value={data.surname}
-            onChange={handleChange}
-            error={errors.surname} />
-        <TextField
-            label="Телефон"
-            name="tel"
-            type="number"
-            value={data.tel}
-            onChange={handleChange}
-            error={errors.tel}
-        />
+        <div className="mx-auto w-full md:w-1/2">
+            <TextField
+                label="Имя"
+                name="name"
+                value={data.name}
+                onChange={handleChange}
+                error={errors.name} />
+            <TextField
+                label="Фамилия"
+                name="surname"
+                value={data.surname}
+                onChange={handleChange}
+                error={errors.surname} />
+            <TextField
+                label="Телефон"
+                name="tel"
+                type="number"
+                value={data.tel}
+                onChange={handleChange}
+                error={errors.tel}
+            />
+            <div className="flex gap-3">
+                <AppButton
+                    type="button"
+                    title="Отмена"
+                    onClick={onFinish} />
+                <AppButton
+                    type="submit"
+                    title="Сохранить"
+                    isDisabled={!isValid} />
+            </div>
+        </div>
     </form>;
 };
 

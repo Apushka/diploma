@@ -6,6 +6,7 @@ import DeliveryForm from "../deliveryForm";
 import PaymentForm from "../paymentForm";
 import { useDispatch } from "react-redux";
 import { constructNewOrder } from "../../../store/orders";
+import { restoreScroll } from "../../../utils/scrollRestore";
 
 const forms = [
     {
@@ -46,18 +47,19 @@ const Accordion = () => {
         setCurrentPanel(prevState => prevState + 1);
         forms[index + 1].disabled = false;
         dispatch(constructNewOrder(data));
+        restoreScroll();
     };
 
     return <div>
-        <div className="flex w-1/2 mx-auto justify-around relative text-gray-300" ref={ref}>
-            {forms.map((step, index) => <React.Fragment key={index}>
+        <div className="flex w-1/2 mx-auto justify-around relative text-gray-300 mb-6" ref={ref}>
+            {forms.map((form, index) => <React.Fragment key={index}>
                 <button
                     className={index <= currentPanel ? "text-black" : ""}
                     onClick={() => setCurrentPanel(index)}
-                    disabled={step.disabled}>
+                    disabled={form.disabled}>
                     <div className="flex flex-col items-center w-6">
                         {index + 1}
-                        <p className="text-xs whitespace-nowrap">{step.title}</p>
+                        <p className="text-xs whitespace-nowrap">{form.title}</p>
                     </div>
                 </button>
                 {index !== forms.length - 1 && <div
@@ -68,6 +70,7 @@ const Accordion = () => {
             key={index}
             title={form.title}
             isActive={index === currentPanel}
+            isAvailable={!form.disabled}
             component={React.cloneElement(form.component, { onProceed: (data) => onProceed(index, data) })}
             onToggle={() => onToggle(index)} />)}
     </div>;

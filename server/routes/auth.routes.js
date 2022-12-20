@@ -14,7 +14,7 @@ router.post("/signUp", [
       if (!errors.isEmpty()) {
         return res.status(400).json({
           error: {
-            message: "INVALID DATA",
+            message: "INVALID_DATA",
             code: 400,
           },
         });
@@ -26,7 +26,7 @@ router.post("/signUp", [
       if (existingUser) {
         return res.status(400).json({
           error: {
-            message: "EMAIL EXISTS",
+            message: "EMAIL_EXISTS",
             code: 400,
           },
         });
@@ -60,7 +60,7 @@ router.post("/signInWithPassword", [
       if (!errors.isEmpty) {
         return res.status(400).json({
           error: {
-            message: "INVALID DATA",
+            message: "INVALID_DATA",
             code: 400,
           },
         });

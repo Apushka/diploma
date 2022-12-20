@@ -12,11 +12,13 @@ const TextField = ({ label, type, name, value, onChange, error, placeholder }) =
         onChange({ name: target.name, value: target.value });
     };
 
-    return (<div className="mb-4">
-        {label && <label htmlFor={label}>{label}</label>}
-        <div>
+    return <div>
+        {label && <label
+            className="block uppercase mb-2"
+            htmlFor={label}>{label}</label>}
+        <div className="mb-3">
             <input
-                className="border border-solid border-black w-full focus:outline-none"
+                className="border border-solid border-black w-full focus:outline-none rounded-lg px-2 mb-1"
                 type={showPassword ? "text" : type}
                 id={name}
                 value={value}
@@ -24,14 +26,15 @@ const TextField = ({ label, type, name, value, onChange, error, placeholder }) =
                 name={name}
                 placeholder={placeholder} />
             {type === "password" && <button
+                className="block float-right text-gray-400 mb-3"
                 type="button"
                 onClick={toggleShowPassword}>
-                <i>показать пароль</i>
+                <i>{showPassword ? "Скрыть пароль" : "Показать пароль"}</i>
             </button>}
             {error && <div
                 className="text-red-400">{error}</div>}
         </div>
-    </div >);
+    </div >;
 };
 
 TextField.defaultProps = {

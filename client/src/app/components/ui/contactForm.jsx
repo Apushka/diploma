@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { validator } from "../../utils/validator";
-import AppButton from "../common/buttonBlack";
+import AppButton from "../common/appButton";
 import TextAreaField from "../common/form/textAreaField";
 import TextField from "../common/form/textField";
 import { useSelector } from "react-redux";
@@ -79,41 +79,44 @@ const ContactForm = ({ onProceed }) => {
         onProceed({ userId: _id, ...rest });
     };
 
-    return <form onSubmit={handleSubmit}>
-        <TextField
-            label="Имя"
-            name="name"
-            value={data.name}
-            onChange={handleChange}
-            error={errors.name}
-        />
-        <TextField
-            label="Фамилия"
-            name="surname"
-            value={data.surname}
-            onChange={handleChange}
-            error={errors.surname}
-        />
-        <TextField
-            label="Адрес электронной почты"
-            name="email"
-            value={data.email}
-            onChange={handleChange}
-            error={errors.email}
-        />
-        <TextField
-            label="Телефон"
-            name="tel"
-            type="number"
-            value={data.tel}
-            onChange={handleChange}
-            error={errors.tel}
-        />
-        <TextAreaField
-            label="Комментарии к заказу"
-            name="comment"
-            value={data.comment || ""}
-            onChange={handleChange} />
+    return <form
+        onSubmit={handleSubmit}>
+        <div className="mx-auto w-full md:w-1/2">
+            <TextField
+                label="Имя"
+                name="name"
+                value={data.name}
+                onChange={handleChange}
+                error={errors.name}
+            />
+            <TextField
+                label="Фамилия"
+                name="surname"
+                value={data.surname}
+                onChange={handleChange}
+                error={errors.surname}
+            />
+            <TextField
+                label="Адрес электронной почты"
+                name="email"
+                value={data.email}
+                onChange={handleChange}
+                error={errors.email}
+            />
+            <TextField
+                label="Телефон"
+                name="tel"
+                type="number"
+                value={data.tel}
+                onChange={handleChange}
+                error={errors.tel}
+            />
+            <TextAreaField
+                label="Комментарии к заказу"
+                name="comment"
+                value={data.comment || ""}
+                onChange={handleChange} />
+        </div>
         <AppButton
             onClick={handleSubmit}
             title="Продолжить"

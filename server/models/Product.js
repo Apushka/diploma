@@ -17,6 +17,10 @@ const schema = new Schema(
       ref: "Category",
     },
     tags: [{ type: Schema.Types.ObjectId, ref: "Tag" }],
+    price: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
