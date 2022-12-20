@@ -59,7 +59,7 @@ const Accordion = () => {
                     disabled={form.disabled}>
                     <div className="flex flex-col items-center w-6">
                         {index + 1}
-                        <p className="text-xs whitespace-nowrap">{form.title}</p>
+                        <p className="hidden md:block text-xs whitespace-nowrap">{form.title}</p>
                     </div>
                 </button>
                 {index !== forms.length - 1 && <div

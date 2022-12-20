@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoginForm from "../components/ui/loginForm";
 import PageContent from "../components/ui/pageContent";
 import RegisterForm from "../components/ui/registerForm";
+import { restoreScroll } from "../utils/scrollRestore";
 
 const Login = () => {
     const { type } = useParams();
@@ -12,8 +13,12 @@ const Login = () => {
         setFormType(prevState => prevState === "register" ? "login" : "register");
     };
 
+    useEffect(() => {
+        restoreScroll();
+    }, []);
+
     return <PageContent>
-        <div className="w-1/2 mx-auto">
+        <div className="w-full md:w-1/2 mx-auto">
             {formType === "register"
                 ? <>
                     <h3 className="uppercase text-lg text-center mb-3">Зарегистрироваться</h3>
@@ -30,9 +35,8 @@ const Login = () => {
                 : <>
                     <h3 className="uppercase text-lg text-center mb-3">Войти</h3>
                     <LoginForm />
-                    <p className="flex flex-col m-2 md:flex-row">
-                        <p className="mr-1">Ещё нет аккаунта?</p>
-                        <a
+                    <p className="m-2">
+                        Ещё нет аккаунта? <a
                             className="uppercase hover:underline"
                             role="button"
                             onClick={toggleFormType}>
