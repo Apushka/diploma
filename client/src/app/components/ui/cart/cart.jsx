@@ -30,7 +30,7 @@ const Cart = ({ onProceed, onOrder }) => {
         {onProceed && <AppButton
             onClick={handleProceed}
             title="Продолжить"
-            isDisabled={false} />}
+            isDisabled={!Object.keys(cart).length} />}
         {onOrder && <AppButton
             onClick={handleOrder}
             title="Оформить заказ" />
