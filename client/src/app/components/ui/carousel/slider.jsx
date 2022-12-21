@@ -77,7 +77,7 @@ const Slider = ({ collection }) => {
             </div>
         </div>
         {isPrev && <div
-            className="absolute flex items-center h-full top-0 -left-5 cursor-pointer"
+            className="absolute flex items-center h-full top-0 -left-3 md:-left-5 cursor-pointer"
             onClick={handlePrev}>
             <div
                 style={{
@@ -87,7 +87,7 @@ const Slider = ({ collection }) => {
             />
         </div>}
         {isNext && <div
-            className="absolute flex items-center h-full top-0 -right-5 cursor-pointer"
+            className="absolute flex items-center h-full top-0 -right-3 md:-right-5 cursor-pointer"
             onClick={handleNext}>
             <div
                 style={{

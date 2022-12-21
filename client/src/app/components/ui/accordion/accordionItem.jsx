@@ -4,9 +4,11 @@ import arrowIcon from "../../../assets/arrow.png";
 
 const AccordionItem = ({ title, onToggle, isActive, isAvailable, component }) => {
     const ref = useRef();
-    const [style, setStyle] = useState({
-        height: "0px"
-    });
+    const initialHeight = {
+        minHeight: "0",
+        height: "0"
+    };
+    const [style, setStyle] = useState(initialHeight);
 
     useEffect(() => {
         setTimeout(() => {
@@ -14,10 +16,8 @@ const AccordionItem = ({ title, onToggle, isActive, isAvailable, component }) =>
                 ? {
                     minHeight: ref.current.scrollHeight + "px"
                 }
-                : {
-                    height: "0px"
-                });
-        }, 100);
+                : initialHeight);
+        }, 200);
     }, [isActive, ref.current?.scrollHeight]);
 
     return <div className={"mb-6 border-b-2 border-black " + (!isAvailable ? "opacity-30" : "")}>

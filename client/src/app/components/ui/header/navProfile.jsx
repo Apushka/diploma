@@ -25,24 +25,26 @@ const NavProfile = () => {
             </svg>
         </button>
 
-        <div
-            className={"absolute right-0 top-8 z-10 bg-white rounded shadow dark:bg-gray-700 " + (isOpen ? "block" : "hidden")}>
-            <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                <li>
-                    <Link
-                        to="/profile"
-                        className="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                        Профиль
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to="/logout"
-                        className="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                        Выйти
-                    </Link>
-                </li>
-            </ul>
+        <div className={"fixed w-screen h-screen bg-transparent top-0 left-0 " + (isOpen ? "block" : "hidden")}>
+            <div
+                className="absolute right-0 top-8 z-10 bg-white rounded shadow dark:bg-gray-700">
+                <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                    <li>
+                        <Link
+                            to="/profile"
+                            className="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            Профиль
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/logout"
+                            className="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            Выйти
+                        </Link>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>;
 };

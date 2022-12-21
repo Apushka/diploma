@@ -7,17 +7,17 @@ import { getUserData } from "../../store/user";
 const ProfileInfo = ({ onEdit }) => {
     const { name, surname, email, tel } = useSelector(getUserData);
 
-    return <div className="relative ">
+    return <div className="relative inline-block border border-black p-10">
         <div
-            className="absolute right-0 w-4 h-4 cursor-pointer"
+            className="absolute top-2 right-2 w-3 h-3 cursor-pointer"
             style={{
                 background: `url(${settingsIcon}) no-repeat center/contain`
             }}
             onClick={onEdit}
         />
-        <p className="uppercase text-lg">{name} {surname}</p>
-        <p className="uppercase text-lg">{email}</p>
-        <p className="uppercase text-lg">{tel}</p>
+        <p className="uppercase text-lg mb-2">{name} {surname}</p>
+        <p className="uppercase text-xs mb-2 ">{email}</p>
+        {tel && <p className="uppercase text-xs">тел: {tel}</p>}
     </div>;
 };
 

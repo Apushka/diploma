@@ -51,7 +51,7 @@ const Accordion = () => {
     };
 
     return <div>
-        <div className="flex w-1/2 mx-auto justify-around relative text-gray-300 mb-6" ref={ref}>
+        <div className="flex w-1/2 mx-auto justify-around relative text-gray-300 mt-10 mb-10" ref={ref}>
             {forms.map((form, index) => <React.Fragment key={index}>
                 <button
                     className={index <= currentPanel ? "text-black" : ""}

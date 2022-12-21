@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const AppButton = ({ type, onClick, title, isDisabled }) => {
     return <button
-        className={"w-full bg-black text-white py-5 uppercase " + (isDisabled ? "opacity-50" : "")}
+        className={"w-full bg-black text-white py-2 uppercase " + (isDisabled ? "opacity-50" : "")}
         type={type}
         onClick={onClick}
         disabled={isDisabled}>

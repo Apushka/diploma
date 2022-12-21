@@ -17,9 +17,7 @@ const ProfilePage = () => {
     const dateOptions = {
         year: "numeric",
         day: "2-digit",
-        month: "long",
-        hour: "2-digit",
-        minute: "2-digit"
+        month: "long"
     };
 
     const handleDelete = () => {
@@ -29,25 +27,30 @@ const ProfilePage = () => {
     return <div>
         <PageHeader title="Личный кабинет" />
         <PageContent>
-            {isEdit
-                ? <ProfileForm onFinish={() => setIsEdit(false)} />
-                : <ProfileInfo onEdit={() => setIsEdit(true)} />}
-            {isEdit && <button
-                className="block ml-auto italic text-xs my-3 hover:text-red-600"
-                onClick={handleDelete}>
-                Удалить аккаунт
-            </button>}
-            {isOrdersLoading
-                ? <Loader />
-                : orders.length > 0 && <div className="flex flex-col items-center">
-                    <p className="text-lg uppercase mb-5">Мои заказы:</p>
-                    {orders.map(order => <div className="mb-5"
-                        key={order._id}>
-                        <Link to={`/order/${order._id}`}>
-                            Заказ от {new Date(order.createdAt).toLocaleString("ru", dateOptions)}
-                        </Link>
-                    </div>)}
-                </div>}
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                {isEdit
+                    ? <div className="md:w-1/3 w-full">
+                        <ProfileForm onFinish={() => setIsEdit(false)} />
+                        <button
+                            className="block ml-auto italic text-xs my-3 hover:text-red-600"
+                            onClick={handleDelete}>
+                            Удалить аккаунт
+                        </button>
+                    </div>
+                    : <ProfileInfo onEdit={() => setIsEdit(true)} />}
+                {isOrdersLoading
+                    ? <Loader />
+                    : orders.length > 0 && <div className="flex flex-col w-full">
+                        <p className="text-lg uppercase mb-5">История заказов</p>
+                        {orders.map(order => <div className="flex justify-between border border-black p-8 box-border hover:underline"
+                            key={order._id}>
+                            <Link to={`/order/${order._id}`}>
+                                № {order._id} от {new Date(order.createdAt).toLocaleString("ru", dateOptions)}
+                            </Link>
+                            <p className="font-bold">{order.total} BYN</p>
+                        </div>)}
+                    </div>}
+            </div>
         </PageContent>
     </div>;
 };

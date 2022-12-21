@@ -15,7 +15,7 @@ const EditQuantity = ({ productId }) => {
         dispatch(decreaseCartProductQuantity(productId));
     };
 
-    return <div className="w-[25%] py-5 text-center">
+    return <div className="w-[25%] py-2 text-center">
         <button onClick={handleRemoveFromCart}>-</button>
         <span className="inline-block w-5">{productQuantity}</span>
         <button onClick={handleAddToCart}>+</button>

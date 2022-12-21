@@ -60,37 +60,35 @@ const ProfileForm = ({ onFinish }) => {
     };
 
     return <form onSubmit={handleSubmit}>
-        <div className="mx-auto w-full md:w-1/2">
-            <TextField
-                label="Имя"
-                name="name"
-                value={data.name}
-                onChange={handleChange}
-                error={errors.name} />
-            <TextField
-                label="Фамилия"
-                name="surname"
-                value={data.surname}
-                onChange={handleChange}
-                error={errors.surname} />
-            <TextField
-                label="Телефон"
-                name="tel"
-                type="number"
-                value={data.tel}
-                onChange={handleChange}
-                error={errors.tel}
-            />
-            <div className="flex gap-3">
-                <AppButton
-                    type="button"
-                    title="Отмена"
-                    onClick={onFinish} />
-                <AppButton
-                    type="submit"
-                    title="Сохранить"
-                    isDisabled={!isValid} />
-            </div>
+        <TextField
+            label="Имя"
+            name="name"
+            value={data.name}
+            onChange={handleChange}
+            error={errors.name} />
+        <TextField
+            label="Фамилия"
+            name="surname"
+            value={data.surname}
+            onChange={handleChange}
+            error={errors.surname} />
+        <TextField
+            label="Телефон"
+            name="tel"
+            type="number"
+            value={data.tel}
+            onChange={handleChange}
+            error={errors.tel}
+        />
+        <div className="flex flex-col gap-3">
+            <AppButton
+                type="button"
+                title="Отмена"
+                onClick={onFinish} />
+            <AppButton
+                type="submit"
+                title="Сохранить"
+                isDisabled={!isValid} />
         </div>
     </form>;
 };

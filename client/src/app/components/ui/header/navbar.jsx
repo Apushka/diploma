@@ -25,22 +25,28 @@ const NavBar = () => {
             onClick={handleClick}>
             <span className={"absolute bg-white top-[7px] left-0 w-full h-[2px] transition-all duration-300 ease-in-out " + (active ? "scale-0" : "")}></span>
         </div>
-        <ul className={"flex lg:relative lg:left-0 lg:flex-row lg:w-full lg:h-full lg:bg-black lg:text-white lg:border-none border border-black bg-white text-black absolute flex-col h-screen w-2/3 top-full -left-full justify-center items-center gap-12 font-light select-none z-20 transition-all duration-200 ease-in-out " + (active ? "-left-0" : "")}>
-            <li>
-                <HeaderNavLink to="/" >ГЛАВНАЯ</HeaderNavLink>
-            </li>
-            <li>
-                <HeaderNavLink to="/catalog">КАТАЛОГ</HeaderNavLink>
-            </li>
-            <li>
-                <HeaderNavLink to="/shops">МАГАЗИНЫ</HeaderNavLink>
-            </li>
-            {tagsList.map(({ _id, name, path }) => <li key={_id}>
-                <HeaderNavLink to={`/catalog/${path}`}>
-                    {name.toUpperCase()}
-                </HeaderNavLink>
-            </li>)}
-        </ul >
+        <div
+            className={"fixed lg:static flex flex-col bg-transparent h-screen w-screen lg:h-auto top-8 left-0 transition-all duration-300 ease-in-out " + (active ? "left-0" : "-left-full")}
+            onClick={handleClick}>
+            <ul
+                className={"flex lg:relative lg:left-0 lg:flex-row lg:w-full lg:h-full lg:bg-black lg:text-white lg:border-none border border-black bg-white text-black flex-col h-screen w-2/3 top-full -left-full justify-center items-center gap-12 font-light select-none z-20 transition-all duration-200 ease-in-out " + (active ? "-left-0" : "")}
+                onClick={(e) => e.stopPropagation()}>
+                <li>
+                    <HeaderNavLink to="/" >ГЛАВНАЯ</HeaderNavLink>
+                </li>
+                <li>
+                    <HeaderNavLink to="/catalog">КАТАЛОГ</HeaderNavLink>
+                </li>
+                <li>
+                    <HeaderNavLink to="/shops">МАГАЗИНЫ</HeaderNavLink>
+                </li>
+                {tagsList.map(({ _id, name, path }) => <li key={_id}>
+                    <HeaderNavLink to={`/catalog/${path}`}>
+                        {name.toUpperCase()}
+                    </HeaderNavLink>
+                </li>)}
+            </ul >
+        </div>
     </>;
 };
 
