@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const config = require("../config/default.json");
 
 class MailService {
   async send({ to, total, name, _id }) {
@@ -7,17 +8,17 @@ class MailService {
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: "ex-centric@yandex.ru",
-        pass: "iaudsphkblepstnl",
+        user: config.mail,
+        pass: config.mailPass,
       },
     });
 
     const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
 
-    let info = await transporter.sendMail({
-      from: "Spardja Shop <ex-centric@yandex.ru>",
+    await transporter.sendMail({
+      from: `Spardja Shop <${config.mail}>`,
       to: to,
-      subject: "Заказ на сайте www.spardja.ru",
+      subject: "Заказ на сайте www.apushka.spardja.ru",
       html: `<div>
         <h2>${capitalizedName}, здравствуйте</h2>
         <h3>Ваш заказ №${_id} на сумму ${total} BYN успешно сформирован</h3>

@@ -27,7 +27,7 @@ const NavProfile = () => {
 
         <div className={"fixed w-screen h-screen bg-transparent top-0 left-0 " + (isOpen ? "block" : "hidden")}>
             <div
-                className="absolute right-0 top-8 z-10 bg-white rounded shadow dark:bg-gray-700">
+                className="absolute right-3 top-10 z-10 bg-white rounded shadow dark:bg-gray-700">
                 <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
                     <li>
                         <Link
