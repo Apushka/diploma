@@ -6,17 +6,17 @@ Fullstack diploma project by Result School student Alex Pushkin.
 
 ### Client
 
--- ReactJS
+- ReactJS
 
 ### Server
 
---- NodeJS
---- Express
---- MongoDB
+- NodeJS
+- Express
+- MongoDB
 
 ## NodeJS version
 
--- v18.9.0
+- v18.9.0
 
 ## Start
 
