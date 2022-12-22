@@ -1,9 +1,23 @@
 # SPARDJA e-commerce shop
 
+## Stack
+
+### Client
+
+-- ReactJS
+
+### Server
+
+--- NodeJS
+--- Express
+--- MongoDB
+
 ## NodeJS version
 
 -- v18.9.0
 
 ## Start
 
--- npm run start
+```bash
+npm run start
+```
