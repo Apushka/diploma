@@ -1,5 +1,7 @@
 # SPARDJA e-commerce shop
 
+Fullstack diploma project by Result School student Alex Pushkin.
+
 ## Stack
 
 ### Client
