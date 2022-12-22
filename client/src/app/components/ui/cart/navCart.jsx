@@ -14,6 +14,10 @@ const NavCart = () => {
     const isProducts = productsQuantity > 0;
 
     useEffect(() => {
+        if (!isProducts) setOpen(false);
+    }, [productsQuantity]);
+
+    useEffect(() => {
         let timer;
         const over = () => {
             clearTimeout(timer);

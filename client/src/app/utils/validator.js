@@ -40,6 +40,19 @@ export function validator(data, config) {
                 break;
             }
             case "isExpiryDate": {
+                const currYear = Number(
+                    new Date().toLocaleString("ru", { year: "2-digit" })
+                );
+                const [month, year] = data.split("/");
+                statusValidate = !(
+                    Number(month) <= 12 &&
+                    Number(year) >= currYear &&
+                    new Date("20" + year, Number(month) - 1).getTime() >
+                        Date.now()
+                );
+                break;
+            }
+            case "isExpiryFormat": {
                 const expiryDateRegExp = /^[0-9]{2}\/[0-9]{2}$/;
                 statusValidate = !expiryDateRegExp.test(data.trim());
                 break;
